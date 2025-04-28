@@ -8,7 +8,7 @@ An end-to-end automation framework that integrates **Apache JMeter** with **Open
 
 This project simplifies performance testing by automating:
 
-- Execution of JMeter `.jmx` test plans via Python
+- Execution of JMeter `.jmx` test plpucans via Python
 - Generation of both CSV (`.jtl`) and HTML reports
 - Parsing and aggregation of test results with Pandas
 - Sending summarized metrics to GPT-3.5-Turbo for analysis
@@ -82,3 +82,25 @@ Historical trend dashboard (store past runs)
 
 GPT-driven .jmx generation from API definitions (Swagger/Postman)
 ```
+
+MIT License
+
+Copyright (c) 2025 Nitesh Jaiswal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
