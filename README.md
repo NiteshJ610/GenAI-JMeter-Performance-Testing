@@ -56,23 +56,18 @@ This project simplifies performance testing by automating:
 
 7. **View the report & analysis**
 
-- **Browser**: http://localhost:8000/index.html
-- **Console**: AI insights printed after test run
+<!-- - **Browser**: http://localhost:8000/index.html
+- **Console**: AI insights printed after test run -->
 
 ## 📈 Architecture
 
-```mermaid
 flowchart TD
 A[User: .jmx Test Plan] --> B[Python Script]
 B --> C[JMeter CLI Execution]
-C --> D[CSV (.jtl) & HTML Report]
+C --> D[CSV and HTML Report]
 D --> E[Pandas Aggregation]
 E --> F[OpenAI GPT-3.5 Analysis]
-F --> G[Console Insights + Hosted HTML]
-
-
-
-
+F --> G[Console Insights and Hosted HTML]
 
 **📅 Roadmap & Future Improvements**
 Support dynamic thread/ramp-up parameters via CLI args or config
@@ -82,13 +77,15 @@ Slack/Email notifications with AI summary
 Historical trend dashboard (store past runs)
 
 GPT-driven .jmx generation from API definitions (Swagger/Postman)
+
 ```
 
-📄 License
+##📄 License
 This project is licensed under the MIT License.
 
-✨ Author
-Nitesh Jaiswal
-<a href="https://linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener">
-Connect with me on LinkedIn
-</a>
+## ✨ Author
+
+**Nitesh Jaiswal**
+🔗 LinkedIn (https://linkedin.com/in/niteshjaiswal)
+
+```
