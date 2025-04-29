@@ -1,0 +1,13 @@
+.env
+# Ignore virtual environment
+.venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore JMeter results and reports
+html-report/
+results.jtl
+jmeter.log
+statistics.json
