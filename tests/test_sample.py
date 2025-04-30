@@ -1,11 +1,10 @@
 import os
 import shutil
 import subprocess
-import threading
-import pandas as pd # type: ignore
-import pytest # type: ignore
+import pandas as pd  # type: ignore
+import pytest  # type: ignore
 from unittest.mock import patch, MagicMock
-import sys
+
 
 # Test cleanup of previous artifacts
 def test_cleanup_artifacts(tmp_path):
@@ -28,6 +27,7 @@ def test_cleanup_artifacts(tmp_path):
     assert not results_file.exists()
     assert not html_report_dir.exists()
 
+
 # Test JMeter command execution
 @patch("subprocess.run")
 def test_run_jmeter(mock_subprocess_run):
@@ -49,14 +49,6 @@ def test_run_jmeter(mock_subprocess_run):
     subprocess.run(jmeter_cmd, check=True)
     mock_subprocess_run.assert_called_once_with(jmeter_cmd, check=True)
 
-# # Test serving HTML report
-# @patch("threading.Thread.start")
-# def test_serve_html_report(mock_thread_start):
-#     import sys
-#     sys.path.append("..")
-#     from ..run_test_and_analyze import serve_html_report
-#     serve_html_report("html-report", 8000)
-#     mock_thread_start.assert_called_once()
 
 # Test CSV aggregation
 @patch("pandas.read_csv")
@@ -83,7 +75,17 @@ def test_aggregate_csv(mock_read_csv):
     assert error_count == 1
     assert error_rate == pytest.approx(33.33, rel=1e-2)
 
-# # Test OpenAI API call
+
+# === Uncomment and update these later as needed ===
+
+# @patch("threading.Thread.start")
+# def test_serve_html_report(mock_thread_start):
+#     import sys
+#     sys.path.append("..")
+#     from ..run_test_and_analyze import serve_html_report
+#     serve_html_report("html-report", 8000)
+#     mock_thread_start.assert_called_once()
+
 # @patch("openai.ChatCompletion.create")
 # def test_openai_api_call(mock_openai_create):
 #     mock_openai_create.return_value = MagicMock(
@@ -98,6 +100,5 @@ def test_aggregate_csv(mock_read_csv):
 #         messages=[{"role": "user", "content": "Test prompt"}],
 #         max_tokens=700,
 #     )
-
-    # assert response.choices[0].message.content == "Test analysis"
-    # mock_openai_create.assert_called_once()
+#     assert response.choices[0].message.content == "Test analysis"
+#     mock_openai_create.assert_called_once()
