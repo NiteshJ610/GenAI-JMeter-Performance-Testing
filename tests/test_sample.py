@@ -3,7 +3,6 @@ import shutil
 import subprocess
 import pandas as pd  # type: ignore
 import pytest  # type: ignore
-from unittest.mock import patch, MagicMock
 
 
 # Test cleanup of previous artifacts
@@ -65,7 +64,7 @@ def test_aggregate_csv(mock_read_csv):
     avg_rt = df["elapsed"].mean()
     max_rt = df["elapsed"].max()
     min_rt = df["elapsed"].min()
-    error_count = df[df["success"] == False].shape[0]
+    error_count = df[~df["success"]].shape[0]
     error_rate = (error_count / total_requests) * 100
 
     assert total_requests == 3

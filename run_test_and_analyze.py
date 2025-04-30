@@ -104,7 +104,7 @@ Questions:
 
 # === STEP 6: Send to OpenAI & Print Analysis ===
 print("🤖 Sending aggregated report to GPT-3.5-Turbo for analysis...")
-client   = OpenAI(api_key=API_KEY)
+client = OpenAI(api_key=API_KEY)
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
