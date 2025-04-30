@@ -82,6 +82,6 @@ GPT-driven .jmx generation from API definitions (Swagger/Postman)
 
 **✨ Author**
 
-## Nitesh Jaiswal
+## Nitesh Jaiswal - Linkedin
 
 🔗 LinkedIn (https://linkedin.com/in/nitesh-jaiswall)
