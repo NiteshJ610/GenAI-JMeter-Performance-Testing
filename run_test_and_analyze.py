@@ -66,8 +66,8 @@ total_requests = len(df)
 avg_rt         = df["elapsed"].mean()
 max_rt         = df["elapsed"].max()
 min_rt         = df["elapsed"].min()
-error_count = df[~df["success"]].shape[0]
-error_rate = (error_count / total_requests) * 100
+error_count    = df[~df["success"]].shape[0]
+error_rate     = (error_count / total_requests) * 100
 
 # Per‑sampler breakdown
 grouped = (
@@ -79,8 +79,7 @@ summary_table = grouped.to_string(index=False)
 
 # === STEP 5: Prepare Full‑Report Prompt for GPT ===
 prompt = f"""
-You are a performance testing expert. Here is a summary of an entire \
-JMeter test run:
+You are a performance testing expert. Here is a summary of an entire JMeter test run:
 
 Test Summary:
 - Total Requests: {total_requests}
