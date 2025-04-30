@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import pandas as pd  # type: ignore
 import pytest  # type: ignore
+from unittest.mock import patch
 
 
 # Test cleanup of previous artifacts
