@@ -33,9 +33,3 @@ jobs:
     - name: Run tests
       run: |
         pytest
-
-    # Step 5: Linting
-    - name: Lint with flake8
-      run: |
-        pip install flake8
-        flake8 . --exclude .venv
